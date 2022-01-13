@@ -1,0 +1,93 @@
+version: '3'
+services:
+  mongos01:
+    image: mongo-proxy
+    container_name: mongos01
+    hostname: mongos01
+    volumes:
+      - ./mongos.conf:/etc/mongos.conf:ro
+    restart: always
+  config01:
+    image: mongo-server
+    container_name: config01
+    hostname: config01
+    volumes:
+      - ./mongod_config.conf:/etc/mongod.conf:ro
+    restart: always
+  config02:
+    image: mongo-server
+    container_name: config02
+    hostname: config02
+    volumes:
+      - ./mongod_config.conf:/etc/mongod.conf:ro
+    restart: always
+  config03:
+    image: mongo-server
+    container_name: config03
+    hostname: config03
+    volumes:
+      - ./mongod_config.conf:/etc/mongod.conf:ro
+    restart: always
+  luna01:
+    image: mongo-server
+    container_name: luna01
+    hostname: luna01
+    volumes:
+      - ./mongod_luna.conf:/etc/mongod.conf:ro
+    restart: always
+  luna02:
+    image: mongo-server
+    container_name: luna02
+    hostname: luna02
+    volumes:
+      - ./mongod_luna.conf:/etc/mongod.conf:ro
+    restart: always
+  luna03:
+    image: mongo-server
+    container_name: luna03
+    hostname: luna03
+    volumes:
+      - ./mongod_luna.conf:/etc/mongod.conf:ro
+    restart: always
+  europa01:
+    image: mongo-server
+    container_name: europa01
+    hostname: europa01
+    volumes:
+      - ./mongod_europa.conf:/etc/mongod.conf:ro
+    restart: always
+  europa02:
+    image: mongo-server
+    container_name: europa02
+    hostname: europa02
+    volumes:
+      - ./mongod_europa.conf:/etc/mongod.conf:ro
+    restart: always
+  europa03:
+    image: mongo-server
+    container_name: europa03
+    hostname: europa03
+    volumes:
+      - ./mongod_europa.conf:/etc/mongod.conf:ro
+    restart: always
+  titan01:
+    image: mongo-server
+    container_name: titan01
+    hostname: titan01
+    volumes:
+      - ./mongod_titan.conf:/etc/mongod.conf:ro
+    restart: always
+  titan02:
+    image: mongo-server
+    container_name: titan02
+    hostname: titan02
+    volumes:
+      - ./mongod_titan.conf:/etc/mongod.conf:ro
+    restart: always
+  titan03:
+    image: mongo-server
+    container_name: titan03
+    hostname: titan03
+    volumes:
+      - ./mongod_titan.conf:/etc/mongod.conf:ro
+    restart: always
