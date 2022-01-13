@@ -268,7 +268,7 @@ Ejecutamos los procesos:
 
 ```
 $ docker-compose up -d
-Creating network "mongo_sharding" with the default driver
+Creating network "mongo_sharding_default" with the default driver
 Creating luna03
 Creating config03
 Creating mongos01
@@ -294,7 +294,7 @@ Para completar el cluster se precisa hacer dos cosas:
 Para estas tareas levantado un cliente `mongo` mediante un contendor, con el requerimiento de añadirlo a la misma red que creo el `docker_compose.yml` para garantizar el poder usar los `container_name` en lugar de las direcciones IP de los contenedor.
 
 ```
-$ docker run -ti --rm --net mongo_sharding mongo-client
+$ docker run -ti --rm --net mongo_sharding_default mongo-client
 ```
 
 > A partir de aquí todos los comandos se hacen en el shell de alpine linux.
